@@ -1,3 +1,4 @@
+import java.util.Random;
 /**
  *    @author - 
  */
@@ -5,13 +6,14 @@ public class DemoBucles
 {
     private final char ASTERISCO = '*';
     private final char ESPACIO = ' ';
+    private Random generador;
 
     /**
      * Constructor  
      */
     public DemoBucles()
     {
-       
+        Random generador = new Random();
     }
 
     /**
@@ -26,9 +28,9 @@ public class DemoBucles
      *  Usa bucles while
      */
     public int mayorPotencia2(int numero) {
+        int i = 0;
         
         return 0;
-
     }
 
     /**
@@ -47,9 +49,15 @@ public class DemoBucles
      *  64 =    64
      */
     public void escribirSumaPotencias(int numero) {
-
-         
-
+        System.out.println();
+        int auxNumero = numero;
+        int aux = 0;
+        aux = auxNumero /2;
+        while (numero % numero != 0){
+            auxNumero = aux;
+            aux /= 2;
+            System.out.print("\t" + auxNumero );
+        }
     }
 
     /**
@@ -64,9 +72,8 @@ public class DemoBucles
      * 
      */
     public void generarAleatorios(int n) {
-
-       
-
+        generador.nextInt(256);
+        
     }
 
     /**
@@ -76,7 +83,12 @@ public class DemoBucles
      */
     public void escribirCaracter(int n, char caracter)
     {
-         
+        String aux = "";
+        String auxN = "";
+        for (int i = 1; i <= n; i++){
+            aux = caracter + auxN;
+        }
+        System.out.println(aux);
     }
 
     /**
@@ -87,8 +99,6 @@ public class DemoBucles
      */
     public  void mostrarEscalera(int escalones, int alto, int ancho) {
         System.out.println();
-
-         
 
     }
 
