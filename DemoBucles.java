@@ -109,13 +109,14 @@ public class DemoBucles
         System.out.println();
         for (int es = 1; es <= escalones; es++) {
             int auxEspacio = 0;
+            int espacios = 0;
             for (int aux = 1; aux <= alto; aux++) {
-                escribirCaracter(ancho, ASTERISCO);                
+                escribirCaracter(ancho, ASTERISCO);
+                escribirCaracter(espacios, ESPACIO);
                 System.out.println();
-                escribirCaracter(auxEspacio, ESPACIO);
+                auxEspacio++;
             } 
-            auxEspacio += ancho;
-            System.out.println();
+            espacios = auxEspacio + ancho;
         }
     }
 }
